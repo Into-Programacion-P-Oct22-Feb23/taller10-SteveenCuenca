@@ -16,6 +16,37 @@ public class Problema01 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        double[][] notas = {{9, 10, 7, 8},
+                            {10, 5, 7, 9},
+                            {7, 9.4, 10, 9}};
+        String[] nombresEstudiante = {"Jerry Ponce", "Gabriela Lewis", "David Bell"};
+        double[] sumaNotas = new double[3];
+
+        double suma = 0;
+        String reporte = "";
+        double promedio = 0;
+
+        for (int i = 0; i < notas.length; i++) {
+            suma = 0;
+            promedio = 0;
+            for (int j = 0; j < notas[i].length; j++) {
+                suma = suma + notas[i][j];
+                promedio = suma/4;                    
+            }
+            sumaNotas[i] = promedio; // 
+        }
+
+        // Presentación de resultados
+        for (int i = 0; i < nombresEstudiante.length; i++) {
+            reporte = String.format("%sEstudiante: %s tiene un promedio de:  "
+                    + "%.2f\n",
+                    reporte,
+                    nombresEstudiante[i],
+                    sumaNotas[i]);
+        }
+
+        System.out.printf("%s\n", reporte);
+
     }
-    
+
 }

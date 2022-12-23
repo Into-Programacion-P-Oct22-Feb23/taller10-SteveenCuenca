@@ -10,5 +10,6 @@ package paquete2;
  * @author reroes
  */
 public class Problema02 {
-    
+
+
 }
